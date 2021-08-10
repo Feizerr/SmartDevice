@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+.body {
+  margin: 0 auto;
+  padding: 0;
+  color: $grey;
+  font-family: "pt-mono-regular", "Arial", sans-serif;
+}

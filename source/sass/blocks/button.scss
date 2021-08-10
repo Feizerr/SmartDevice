@@ -1,0 +1,14 @@
+.button {
+  @include fonts(14px, 16px);
+  text-transform: uppercase;
+  letter-spacing: 5%;
+  text-align: center;
+  font-family: "roboto-condensed-bold", Arial, sans-serif;
+  width: 180px;
+  border: 1px solid $sky-blue;
+  border-radius: 5px;
+}
+
+.button:hover {
+  opacity: 40%;
+}

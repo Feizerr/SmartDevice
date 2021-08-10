@@ -1,0 +1,21 @@
+@mixin fonts($size, $line) {
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin offset($padding, $margin) {
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin list-reset() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin link() {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}

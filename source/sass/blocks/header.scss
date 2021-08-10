@@ -1,0 +1,106 @@
+.header {
+  background-color: $dark-blue;
+  color: $white;
+  min-height: 950px;
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    min-height: 685px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header {
+    min-height: 647px;
+  }
+}
+
+.header__wrapper {
+  margin: 0 auto;
+  padding: 44px 50px 0;
+  max-width: 1415px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: $tablet-width) {
+  .header__wrapper {
+    padding: 20px 25px 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header__logo svg {
+
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header__wrapper {
+    padding: 17px 15px 0;
+  }
+}
+
+.header__contacts {
+  min-width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__contacts a:hover {
+  opacity: 40%;
+}
+
+.header__phone,
+.header__mail {
+  @include link();
+  color: $white;
+  @include fonts(16px, 18px);
+  padding-top: 14px;
+  display: block;
+  min-width: min-content;
+}
+
+.header__phone {
+  margin-left: 85px;
+}
+
+@media (max-width: $tablet-width) {
+  .header__phone {
+    margin-left: 32px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header__phone {
+    margin-left: 23px;
+  }
+}
+
+.header__mail span {
+  padding-left: 21px;
+}
+
+@media (max-width: $tablet-width) {
+  .header__contacts span {
+    display: none;
+  }
+}
+
+.header__phone span {
+  padding-left: 14px;
+}
+
+.header__button {
+  margin-left: 47px;
+  background-color: $dark-blue;
+  color: $white;
+  border-color: $white;
+}
+
+@media (max-width: $tablet-width) {
+  .header__button {
+    display: none;
+  }
+}
