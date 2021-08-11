@@ -19,9 +19,16 @@
   <header class="header">
     <div class="header__wrapper">
       <a class="header__logo" href="">
-        <svg width="202" height="52">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/brain.svg">
+          <img class="header__logo-img" src="img/logo.svg" width="202" height="52" alt="Логотип компании">
+        </picture>
+
+
+
+        <!-- <svg width="202" height="52">
           <use xlink:href="img/sprite.svg#logo" x="0" y="0"></use>
-        </svg>
+        </svg> -->
       </a>
       <div class="header__contacts">
         <a class="header__mail" href="mailto:info@sd.ru">
