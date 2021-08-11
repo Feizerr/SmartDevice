@@ -16,39 +16,111 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="body">
-  <header class="header">
-    <div class="header__wrapper">
-      <a class="header__logo" href="">
-        <picture>
-          <source media="(max-width: 768px)" srcset="img/brain.svg">
-          <img class="header__logo-img" src="img/logo.svg" width="202" height="52" alt="Логотип компании">
-        </picture>
-
-
-
-        <!-- <svg width="202" height="52">
-          <use xlink:href="img/sprite.svg#logo" x="0" y="0"></use>
-        </svg> -->
-      </a>
-      <div class="header__contacts">
-        <a class="header__mail" href="mailto:info@sd.ru">
-          <svg width="19" height="14">
-            <use xlink:href="img/sprite.svg#envelope" x="0" y="0"></use>
-          </svg>
-          <span>info@sd.ru</span>
+  <div class="page">
+    <header class="header">
+      <div class="header__wrapper">
+        <a class="header__logo" href="">
+          <picture>
+            <source media="(max-width: 768px)" srcset="img/brain.svg">
+            <img class="header__logo-img" src="img/logo.svg" width="202" height="52" alt="Логотип компании">
+          </picture>
         </a>
-        <a class="header__phone" href="tel:74950005252">
-          <svg width="17" height="17">
-            <use xlink:href="img/sprite.svg#phone-call" x="0" y="0"></use>
-          </svg>
-          <span>+7 (495) 000 52 52</span>
-        </a>
-        <button class="header__button button">Заказать звонок</button>
+        <div class="header__contacts">
+          <a class="header__mail" href="mailto:info@sd.ru">
+            <svg width="19" height="14">
+              <use xlink:href="img/sprite.svg#envelope" x="0" y="0"></use>
+            </svg>
+            <span>info@sd.ru</span>
+          </a>
+          <a class="header__phone" href="tel:74950005252">
+            <svg width="17" height="17">
+              <use xlink:href="img/sprite.svg#phone-call" x="0" y="0"></use>
+            </svg>
+            <span>+7 (495) 000 52 52</span>
+          </a>
+          <button class="header__button button">Заказать звонок</button>
+        </div>
       </div>
+      <h1>Печатные платы</h1>
+    </header>
+    <main class="main">
+    </main>
 
-    </div>
-
-  </header>
-  <h1>Печатные платы</h1>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__links">
+          <a class="header__logo" href="">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/brain.svg">
+              <img class="header__logo-img" src="img/logo.svg" width="202" height="52" alt="Логотип компании">
+            </picture>
+          </a>
+          <ul class="footer__social">
+            <li>
+              <a href="#">
+                <svg width="27" height="27">
+                  <use xlink:href="img/sprite.svg#fb" x="0" y="0"></use>
+                </svg>
+                <span class="visually-hidden">facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="27" height="27">
+                  <use xlink:href="img/sprite.svg#ok" x="0" y="0"></use>
+                </svg>
+                <span class="visually-hidden">одноклассники</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="27" height="27">
+                  <use xlink:href="img/sprite.svg#vk" x="0" y="0"></use>
+                </svg>
+                <span class="visually-hidden">vkontakte</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <section class="footer__navigation">
+          <h2>Разделы сайта</h2>
+          <button class="footer__button footer__navigation-toggle" type="button">
+            <span class="visually-hidden">Открыть раздел</span>
+          </button>
+          <ul>
+            <li>О компании</li>
+            <li>Продукты</li>
+            <li>Производство печатных плат</li>
+            <li>Монтаж печатных плат</li>
+            <li>Комплектующие</li>
+            <li>Доставка</li>
+            <li>Контакты</li>
+          </ul>
+        </section>
+        <section class="footer__contacts">
+          <h2>Наш офис</h2>
+          <button class="footer__button footer__contacts-toggle" type="button">
+            <span class="visually-hidden">Открыть раздел</span>
+          </button>
+          <p>г. Мытищи, Олимпийский проспект, д.10</p>
+          <ul>
+            <li><a href="tel:74955894050">+7 (495) 589-40-50</a></li>
+            <li><a href="tel:79250038767">+7 (925) 003-87-67</a></li>
+            <li><a href="tel:792692608079">+7 (926) 926-080-79</a></li>
+          </ul>
+        </section>
+      </div>
+      <section class="footer__information">
+        <div class="footer__information-wrapper">
+          <div class="footer-container">
+            <p>Все права защищены</p>
+            <p>1999-2018 SD Service Devices</p>
+          </div>
+          <p>Условия конфиденциальности</p>
+          <p>Developed by wow studio </p>
+        </div>
+      </section>
+    </footer>
+  </div>
 </body>
 </html>
