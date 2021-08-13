@@ -116,13 +116,16 @@
 }
 
 .header__button {
+  @include link();
+  display: block;
   margin-left: 53px;
   background-color: $dark-blue;
   color: $white;
   border-color: $white;
-  padding: 5px 10px;
+  padding: 15px 10px 8px;
   box-sizing: border-box;
   margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: $tablet-width) {
