@@ -1,0 +1,58 @@
+.accordion {
+  display: flex;
+  min-width: 70%;
+  justify-content: space-between;
+}
+
+@media (max-width: $tablet-width) {
+  .accordion {
+    min-width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .accordion {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .accordion-item-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .accordion-item-header::after {
+    content: "";
+    background-image: url("../img/plus.svg");
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .accordion-item-header.active::after {
+    content: "";
+    background-image: url("../img/minus.svg");
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+  }
+}
