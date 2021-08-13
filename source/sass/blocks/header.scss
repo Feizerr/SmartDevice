@@ -1,7 +1,10 @@
 .header {
   background-color: $dark-blue;
   color: $white;
-  min-height: 950px;
+  min-height: 878px;
+  background-image: url("../img/background-line.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: $tablet-width) {
@@ -66,9 +69,17 @@
 @media (max-width: $tablet-width) {
   .header__phone,
   .header__mail {
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header__phone,
+  .header__mail {
     padding-top: 8px;
   }
 }
+
 
 
 .header__phone {
