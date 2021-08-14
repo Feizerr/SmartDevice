@@ -1,0 +1,150 @@
+.adventage {
+  padding: 113px 0 76px;
+  max-width: 1170px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: $tablet-width) {
+  .adventage {
+    padding: 54px 25px 36px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .adventage {
+    padding: 37px 15px 36px;
+  }
+}
+
+.adventage ul {
+  @include list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.adventage li {
+  flex-basis: 49%;
+  margin-bottom: 30px;
+  padding: 38px 42px 72px 44px;
+  border: 1px solid $the-lightest-grey;
+  border-left: 2px solid $sky-blue;
+  background-color: $white;
+}
+
+@media (max-width: $tablet-width) {
+  .adventage li {
+    padding: 24px 20px 27px 26px;
+    flex-basis: 48%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .adventage li {
+    flex-basis: 100%;
+    padding: 25px 15px 27px 22px;
+    margin-bottom: 17px;
+    min-height: 232px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .adventage li:first-child {
+    padding: 25px 17px 27px 26px;
+  }
+}
+
+.adventage h3 {
+  @include offset(0, 0);
+  @include fonts(24px, 33px);
+  font-family: roboto-condensed-regular, Arial, sans-serif;
+  color: $sky-blue;
+  padding-top: 18px;
+  padding-bottom: 16px;
+  max-width: 90%;
+}
+
+@media (max-width: $tablet-width) {
+  .adventage h3 {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .adventage h3 {
+    @include fonts(20px, 28px);
+    padding-top: 7px;
+    padding-bottom: 9px;
+  }
+}
+
+.adventage li:hover {
+  color: $white;
+  background-color: $sky-blue;
+  color: $white;
+
+  & h3 {
+    color: $white;
+  }
+
+  & svg {
+    stroke: $white;
+  }
+}
+
+.adventage p {
+  @include offset(0, 0);
+  @include fonts(16px, 21px);
+  max-width: 100%;
+}
+
+@media (max-width: $mobile-width) {
+  .adventage p {
+    line-height: 21.7px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .adventage__stopwatch {
+    width: 30px;
+    height: 36px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .adventage__hired {
+    width: 32px;
+    height: 36px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .adventage__detective {
+    width: 31px;
+    height: 36px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .adventage__detective {
+    height: 37px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .adventage__tag {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .adventage__tag {
+    width: 32px;
+    height: 46px;
+  }
+}

@@ -1,0 +1,125 @@
+.company {
+  margin: 0 auto;
+  max-width: 1190px;
+  padding: 15px 19px 110px 187px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+@media (min-width: $desktop-width) {
+  .company::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/year.png");
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 317px;
+    top: 5%;
+    left: -1%;
+    transform: translate(-5%, -1%);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .company {
+    padding: 0 25px 83px 211px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-image: url("../img/year-tab.png");
+      width: 185px;
+      height: 362px;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .company {
+    padding: 0 15px 65px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.company h2 {
+  @include offset(0, 0);
+  @include fonts(36px, 50px);
+  font-family: roboto-condensed-regular, Arial, sans-serif;
+  padding-bottom: 23px;
+  max-width: 100%;
+}
+
+@media (max-width: $tablet-width) {
+  .company h2 {
+    @include fonts(32px, 45px);
+    padding-bottom: 28px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .company h2 {
+    @include fonts(28px, 39px);
+    padding-bottom: 22px;
+  }
+}
+
+.company p {
+  @include offset(0, 0);
+  @include fonts(16px, 21px);
+  padding-bottom: 24px;
+  max-width: 100%;
+}
+
+@media (max-width: $tablet-width) {
+  .company p {
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .company p {
+    padding-bottom: 48px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .company p:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .company span {
+    display: none;
+  }
+}
+
+.company__button {
+  margin-top: 19px;
+  display: block;
+  color: $sky-blue;
+  border:1px solid $sky-blue;
+  width: 180px;
+  padding: 14px 13px 8px 13px;
+  box-sizing: border-box;
+}
+
+@media (max-width: $tablet-width) {
+  .company__button {
+    padding-bottom: 14px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .company__button {
+    margin-top: 38px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}

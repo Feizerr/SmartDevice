@@ -1,7 +1,7 @@
 .button {
   @include fonts(14px, 16px);
   text-transform: uppercase;
-  letter-spacing: 5%;
+  letter-spacing: 0.5px;
   text-align: center;
   font-family: "roboto-condensed-bold", Arial, sans-serif;
   width: 180px;

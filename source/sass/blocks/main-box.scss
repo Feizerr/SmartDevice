@@ -6,13 +6,21 @@
   background-repeat: no-repeat;
   background-size: auto 651px;
   background-position: 100.5% 28%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/micro@2x.png");
+  }
 }
 
 @media (max-width: $tablet-width) {
   .main-box {
     background-image: url("../img/micro-tab.png");
     background-size: auto 465px;
-    background-position: 100.5% -58%;
+    background-position: 100% -57%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/micro-tab@2x.png");
+    }
   }
 }
 
@@ -20,9 +28,13 @@
   .main-box {
     background-image: url("../img/micro-mob.png");
     background-size: auto 449px;
-    background-position: 121.5% -24%;
+    background-position: 121.5% -44%;
     padding-left: 15px;
     padding-right: 15px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/micro-mob@2x.png");
+    }
   }
 }
 
@@ -60,6 +72,7 @@
     letter-spacing: 4px;
     max-width: 365px;
     padding-top: 113px;
+    padding-bottom: 29px;
   }
 }
 
@@ -96,7 +109,7 @@
   .main-box p {
     @include fonts(18px, 28px);
     padding-left: 57px;
-    padding-bottom: 57px;
+    padding-bottom: 56px;
     max-width: 63%;
 
     &::before {
@@ -110,22 +123,23 @@
   .main-box p {
     @include fonts(16px, 25px);
     padding-left: 52px;
-    padding-bottom: 42px;
+    padding-bottom: 39px;
     max-width: 90%;
   }
 }
 
 .main-box__button {
   @include link();
+  @include fonts(16px, 18px);
   display: block;
   color: $white;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   padding: 17px 28px 14px;
   background-color: $sky-blue;
   width: 407px;
   box-sizing: border-box;
   margin-bottom: 96px;
-  margin-left: 97px;
+  margin-left: 104px;
 }
 
 @media (max-width: $tablet-width) {
@@ -134,6 +148,7 @@
     padding-bottom: 20px;
     margin-bottom: 96px;
     margin-left: 59px;
+    letter-spacing: 0.8px;
   }
 }
 
@@ -141,7 +156,7 @@
   .main-box__button {
     width: 290px;
     padding-bottom: 19px;
-    margin-bottom: 96px;
+    margin-bottom: 18px;
     margin-left: 0;
   }
 }
