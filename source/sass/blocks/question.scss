@@ -1,0 +1,326 @@
+.question {
+  background-color: $sky-blue;
+  color: $white;
+  padding-top: 93px;
+  padding-bottom: 116px;
+}
+
+@media (max-width: $tablet-width) {
+  .question {
+    padding-top: 76px;
+    padding-bottom: 104px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .question {
+    padding-top: 30px;
+    padding-bottom: 44px;
+    margin-bottom: 29px;
+  }
+}
+
+.question__wrapper {
+  padding-right: 200px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  max-width: 1568px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  background-image: url("../img/plane.png");
+  background-repeat: no-repeat;
+  background-size: 43%;
+  background-position: 1% 85%;
+}
+
+@media (max-width: $tablet-width) {
+  .question__wrapper {
+    background-image: none;
+    align-items: flex-start;
+    padding: 0 89px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .question__wrapper {
+    padding: 0 15px;
+  }
+}
+
+.question__wrapper h2,
+.question__wrapper p,
+.question__form {
+  width: 50%;
+  max-width: 570px;
+}
+
+@media (max-width: $tablet-width) {
+  .question__wrapper h2,
+  .question__wrapper p,
+  .question__form {
+    width: 100%;
+  }
+}
+
+.question h2 {
+  @include offset(0, 0);
+  @include fonts(36px, 50px);
+  font-family: roboto-condensed-regular, Arial, sans-serif;
+  padding-bottom: 7px;
+  width: 50%;
+}
+
+@media (max-width: $tablet-width) {
+  .question h2 {
+    @include fonts(32px, 45px);
+    padding-bottom: 19px;
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .question h2 {
+    @include fonts(28px, 39px);
+    padding-bottom: 14px;
+  }
+}
+
+.question p {
+  @include offset(0, 0);
+  @include fonts(16px, 21px);
+  padding-bottom: 49px;
+  width: 50%;
+}
+
+@media (max-width: $tablet-width) {
+  .question p {
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .question p {
+    width: 77%;
+    padding-bottom: 27px;
+  }
+}
+
+.question__form {
+  max-width: 570px;
+}
+
+.question__form ul {
+  @include list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.question__form li:not(:last-child) {
+  flex-basis: 49%;
+  min-width: 200px;
+}
+
+@media (max-width: $tablet-width) {
+  .question__form li:not(:last-child) {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .question__form li:not(:last-child) {
+    flex-basis: 100%;
+  }
+}
+
+.question__form li:last-child {
+  flex-basis: 100%;
+  min-width: 200px;
+}
+
+.question__form input,
+.question__form textarea {
+  background-color: rgba($white, 0.1);
+  border: none;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 16.5px;
+
+  &:hover {
+    background-color: rgba($white, 0.3);
+  }
+
+  &:active {
+    border: none;
+    outline: 2px solid $white;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .question__form input,
+  .question__form textarea {
+    padding-top: 19px;
+    padding-left: 18.5px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .question__form input,
+  .question__form textarea {
+    padding-top: 12px;
+  }
+}
+
+.question__form input::placeholder,
+.question__form textarea::placeholder {
+  color: $white;
+}
+
+.question__form input {
+  min-height: 50px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+@media (max-width: $mobile-width) {
+  .question__form input {
+    margin-bottom: 33px;
+  }
+}
+
+.question__form textarea {
+  min-height: 154px;
+  margin-bottom: 43px;
+}
+
+@media (max-width: $tablet-width) {
+  .question__form textarea {
+    margin-bottom: 54px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .question__form textarea {
+    min-height: 102px;
+    margin-bottom: 26px;
+  }
+}
+
+.question__send {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: $mobile-width) {
+  .question__send {
+    flex-direction: column;
+  }
+}
+
+.question__button {
+  @include fonts(14px, 16px);
+  background-color: $sky-blue;
+  color: $white;
+  border: 1px solid $white;
+  min-height: 45px;
+  padding-top: 5px;
+  padding-left: 9px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  flex-basis: 49%;
+  max-width: 280px;
+}
+
+@media (max-width: $mobile-width) {
+  .question__button {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.question__send input {
+  width: 16px;
+  height: 16px;
+  background-color: $sky-blue;
+  border: 1px solid $white;
+}
+
+.question__send label {
+  @include fonts(14px, 15px);
+  opacity: 0.8;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  flex-basis: 49%;
+  padding-left: 51px;
+  padding-top: 10px;
+}
+
+@media (max-width: $tablet-width) {
+  .question__send label {
+    padding-left: 65px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .question__send label {
+    padding-left: 33px;
+    padding-top: 3px;
+  }
+}
+
+.question__send input + label::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 11px;
+  border: 1px solid $white;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: $tablet-width) {
+  .question__send input + label::before {
+    left: 32px;
+    top: 9px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .question__send input + label::before {
+    left: 0;
+    top: 3px;
+  }
+}
+
+.question__send input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 22px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/check.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: $tablet-width) {
+  .question__send input:checked + label::after {
+    left: 36px;
+    top: 14px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .question__send input:checked + label::after {
+    left: 4px;
+    top:7px;
+  }
+}

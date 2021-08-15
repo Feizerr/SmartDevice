@@ -121,6 +121,34 @@
           </ul>
         </div>
       </section>
+      <section class="question">
+        <div class="question__wrapper">
+          <h2>Остались вопросы? Задайте их нам!</h2>
+          <p>Мы проконсультируем Вас бесплатно</p>
+          <form class="question__form">
+            <ul>
+              <li>
+                <label class="question__label question__label-info" for="name"></label>
+                <input type="text" name="name" placeholder="Имя" id="name" maxlength="30" required="">
+              </li>
+              <li>
+                <label class="question__label question__label-info" for="phone"></label>
+                <input type="number" name="phone" placeholder="Телефон" id="phone" maxlength="10" required="">
+              </li>
+              <li>
+                <label class="question__label question__fieldset" for="message"></label>
+                <textarea class="question__message" name="comment" placeholder="Ваш вопрос" id="message"></textarea>
+              </li>
+            </ul>
+            <div class="question__send">
+              <button class="button question__button" type="submit">Задать вопрос</button>
+              <input class="question__check visually-hidden" type="checkbox" name="agree" id="agree" checked="" required="">
+              <label class="form__label form__label-aditional" for="agree">Я согласен на обработку  персональных данных</label>
+            </div>
+          </form>
+        </div>
+
+      </section>
     </main>
 
     <footer class="footer">
