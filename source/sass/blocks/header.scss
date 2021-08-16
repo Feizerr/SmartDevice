@@ -53,7 +53,11 @@
 }
 
 .header__contacts a:hover {
-  opacity: 40%;
+  opacity: 0.7;
+}
+
+.header__contacts a:active {
+  opacity: 0.3;
 }
 
 .header__phone,

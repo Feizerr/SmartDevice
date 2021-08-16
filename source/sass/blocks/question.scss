@@ -222,6 +222,10 @@
   }
 }
 
+.question__send:hover label {
+  opacity: 0.5;
+}
+
 .question__button {
   @include fonts(14px, 16px);
   background-color: $sky-blue;

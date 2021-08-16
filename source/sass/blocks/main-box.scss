@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-size: auto 651px;
   background-position: 100.5% 28%;
+  scroll-behavior: smooth;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/micro@2x.png");
@@ -168,7 +169,14 @@
   opacity: 0.5;
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
-  scroll-behavior: smooth;
+}
+
+.main-box__scroll:hover {
+  color: $sky-blue;
+}
+
+.main-box__scroll:active {
+  color: rgba($sky-blue, 0.7);
 }
 
 @media (max-width: $tablet-width) {
@@ -191,4 +199,9 @@
   .main-box__button-mobile {
     display: block;
   }
+}
+
+.modal__overlay {
+  width: 100%;
+  height: 100%;
 }

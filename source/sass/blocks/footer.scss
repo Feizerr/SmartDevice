@@ -127,6 +127,19 @@
   margin-right: 16px;
 }
 
+.footer__social-link svg {
+  color: $middle-grey;
+}
+
+.footer__social-link:hover svg {
+  color: $sky-blue;
+}
+
+.footer__social-link:active svg {
+  color: rgba($sky-blue, 0.5);
+}
+
+
 .footer li,
 .footer p {
   opacity: 50%;
@@ -139,7 +152,17 @@
 .footer__navigation a,
 .footer__contacts a {
   @include link();
-  color:rgba($dark-blue, 0.5);
+  color: rgba($dark-blue, 0.5);
+}
+
+.footer__navigation a:hover,
+.footer__contacts a:hover {
+  color: $sky-blue;
+}
+
+.footer__navigation a:active,
+.footer__contacts a:active {
+  color: rgba($sky-blue, 0.5);
 }
 
 @media (max-width: $tablet-width) {

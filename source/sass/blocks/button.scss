@@ -10,5 +10,9 @@
 }
 
 .button:hover {
-  opacity: 40%;
+  opacity: 0.5;
+}
+
+.button:active {
+  opacity: 0.3;
 }

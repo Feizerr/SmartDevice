@@ -67,67 +67,78 @@ validation();
 
 // localStorage
 
-var form = document.querySelector('.question__form');
-var personName = form.querySelector('#name');
-var personPhone = form.querySelector('#phone');
+var questionForm = document.querySelector('.question__form');
+var personNameFromQuestionForm = questionForm.querySelector('#name');
+var personPhoneFromQuestionForm = questionForm.querySelector('#phone');
+var modalForm = document.querySelector('.modal__form');
+var personNameFromModal = modalForm.querySelector('#modal-name');
+var personPhoneFromModal = modalForm.querySelector('#modal-phone');
 
-var isStorageSupport = true;
-var storageName = '';
-var storagePhone = '';
+var addDataFromLocalStorage = function (form, personName, personPhone) {
+  var isStorageSupport = true;
+  var storageName = '';
+  var storagePhone = '';
 
-try {
-  storageName = localStorage.getItem('name');
-  storagePhone = localStorage.getItem('phone');
-} catch (err) {
-  isStorageSupport = false;
-}
+  try {
+    storageName = localStorage.getItem('name');
+    storagePhone = localStorage.getItem('phone');
+  } catch (err) {
+    isStorageSupport = false;
+  }
 
-window.addEventListener('load', function () {
-  if (storageName) {
-    personName.value = storageName;
-    personPhone.focus();
-    if (storagePhone) {
-      personPhone.value = storagePhone;
+  window.addEventListener('load', function () {
+    if (storageName) {
+      personName.value = storageName;
+      if (storagePhone) {
+        personPhone.value = storagePhone;
+      }
     }
-  } else {
-    personName.focus();
-  }
-});
+  });
 
-form.addEventListener('submit', function () {
-  if (isStorageSupport) {
-    localStorage.setItem('name', personName.value);
-    localStorage.setItem('phone', personPhone.value);
-  }
-});
+  form.addEventListener('submit', function () {
+    if (isStorageSupport) {
+      localStorage.setItem('name', personName.value);
+      localStorage.setItem('phone', personPhone.value);
+    }
+  });
+};
+
+addDataFromLocalStorage(questionForm, personNameFromQuestionForm, personPhoneFromQuestionForm);
+addDataFromLocalStorage(modalForm, personNameFromModal, personPhoneFromModal);
 
 //pop-up
 
-var modal = document.querySelector(".modal");
 var buttonShowModal = document.querySelector(".header__button");
 var closeModal = document.querySelector(".modal__close");
 var buttonSend = document.querySelector(".modal__button");
+var overlay = document.querySelector(".modal");
 
 buttonShowModal.addEventListener("click", function(evt) {
 	evt.preventDefault();
-	modal.classList.add("modal__show");
+	overlay.classList.add("modal__show");
+  personNameFromModal.focus();
 });
 
-closeModal.addEventListener("click", function(evt) {
-	evt.preventDefault();
-	modal.classList.remove("modal-show");
+closeModal.addEventListener("click", function() {
+	overlay.classList.remove("modal__show");
 });
 
-buttonSend.addEventListener("click", function(evt) {
-	evt.preventDefault();
-	modal.classList.remove("modal__show");
+buttonSend.addEventListener("onsubmit", function() {
+  overlay.classList.remove("modal__show");
 });
 
 window.addEventListener("keydown", function(evt) {
-	if (evt.key === 27) {
+	if (evt.key === 27 || evt.key === "Escape") {
 		if (modal.classList.contains("modal__show")) {
 			evt.preventDefault();
-			modal.classList.remove("modal__show");
-	}
-}
+			overlay.classList.remove("modal__show");
+	  }
+  }
 })
+
+document.onclick = function(e){
+  if (e.target === overlay) {
+    overlay.classList.remove("modal__show");
+  };
+};
+
