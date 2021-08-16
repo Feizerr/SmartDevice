@@ -4,23 +4,21 @@ var minHeight = 0;
 var accordionItemHeaders = document.querySelectorAll('.accordion__item-header');
 
 accordionItemHeaders.forEach(accordionItemHeader => {
-    accordionItemHeader.addEventListener('click', event => {
-        var currentlyActiveAccordionItemHeader = document.querySelector('.accordion__item-header.active');
-        if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
-            currentlyActiveAccordionItemHeader.classList.toggle('active');
-            currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = minHeight;
+  accordionItemHeader.addEventListener('click', event => {
+    var currentlyActiveAccordionItemHeader = document.querySelector('.accordion__item-header.active');
+    if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
+      currentlyActiveAccordionItemHeader.classList.toggle('active');
+      currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = minHeight;
+    }
 
-        }
-
-        accordionItemHeader.classList.toggle('active');
-        var accordionItemBody = accordionItemHeader.nextElementSibling;
-        if(accordionItemHeader.classList.contains('active')) {
-            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
-        }
-        else {
-            accordionItemBody.style.maxHeight = minHeight;
-        }
-    });
+    accordionItemHeader.classList.toggle('active');
+    var accordionItemBody = accordionItemHeader.nextElementSibling;
+    if (accordionItemHeader.classList.contains('active')) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
+    } else {
+      accordionItemBody.style.maxHeight = minHeight;
+    }
+  });
 })
 
 //mask
@@ -29,38 +27,37 @@ var backspace = 'Backspace';
 var startTemplate = '+7(';
 var bracket = ')';
 
-
 var validation = function () {
 
-    var phone = document.querySelectorAll('[type=tel]');
+  var phone = document.querySelectorAll('[type=tel]');
 
-    var addMask = function (input) {
-      input.addEventListener('focus', function (evt) {
-        if (!input.value && evt.key !== backspace) {
-          input.value = startTemplate;
-        } else {
-          return;
-        }
-      });
-
-      input.addEventListener('keydown', function (evt) {
-        var numberLength = input.value.length;
-
-        if (numberLength === 6 && evt.key !== backspace) {
-          input.value = input.value + bracket;
-        }
-
-        if (numberLength === 0) {
-          input.value = startTemplate;
-        }
-      });
-    };
-
-    if (phone) {
-      for (var i = 0; i < phone.length; i++) {
-        addMask(phone[i]);
+  var addMask = function (input) {
+    input.addEventListener('focus', function (evt) {
+      if (!input.value && evt.key !== backspace) {
+        input.value = startTemplate;
+      } else {
+        return;
       }
+    });
+
+    input.addEventListener('keydown', function (evt) {
+      var numberLength = input.value.length;
+
+      if (numberLength === 6 && evt.key !== backspace) {
+        input.value = input.value + bracket;
+      }
+
+      if (numberLength === 0) {
+        input.value = startTemplate;
+      }
+    });
+  };
+
+  if (phone) {
+    for (var i = 0; i < phone.length; i++) {
+      addMask(phone[i]);
     }
+  }
 };
 
 validation();
@@ -112,39 +109,38 @@ var buttonShowModal = document.querySelector(".header__button");
 var closeModal = document.querySelector(".modal__close");
 var buttonSend = document.querySelector(".modal__button");
 var overlay = document.querySelector(".modal");
+var body = document.querySelector('.body');
 
+var changePopupCondition = function () {
+  overlay.classList.toggle("modal__show");
+  body.classList.toggle('modal__hidden');
+}
 
-
-buttonShowModal.addEventListener("click", function(evt) {
-	evt.preventDefault();
-	overlay.classList.add("modal__show");
-
-  personNameFromModal.focus();
+buttonShowModal.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  changePopupCondition()
 });
 
-closeModal.addEventListener("click", function() {
-	overlay.classList.remove("modal__show");
-
+closeModal.addEventListener("click", function () {
+  changePopupCondition();
 });
 
-buttonSend.addEventListener("onsubmit", function() {
-  overlay.classList.remove("modal__show");
-
+buttonSend.addEventListener("onsubmit", function () {
+  changePopupCondition();
 });
 
-window.addEventListener("keydown", function(evt) {
-	if (evt.key === 27 || evt.key === "Escape") {
+window.addEventListener("keydown", function (evt) {
+  if (evt.key === 27 || evt.key === "Escape") {
 
-		if (overlay.classList.contains("modal__show")) {
-			evt.preventDefault();
-			overlay.classList.remove("modal__show");
-	  }
+    if (overlay.classList.contains("modal__show")) {
+      evt.preventDefault();
+      changePopupCondition();
+    }
   }
 })
 
-document.onclick = function(e){
+document.onclick = function (e) {
   if (e.target === overlay) {
-    overlay.classList.remove("modal__show");
+    changePopupCondition();
   };
 };
-

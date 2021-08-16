@@ -1,12 +1,11 @@
 .modal {
   position: fixed;
   width: 100%;
-  // height: 100vh;
+  height: 100vh;
   top: 0;
   left: 0;
   z-index: 20;
   background-color: rgba($black, 0.5);
-  overflow: hidden;
   display: none;
 }
 
@@ -19,7 +18,7 @@
   background-color: $sky-blue;
   color: $white;
   margin: 0 auto;
-	margin-top: 50px;
+  margin-top: 50px;
   position: relative;
 }
 
@@ -106,7 +105,7 @@
   padding-top: 10px;
 }
 
-.modal__send input + label::before {
+.modal__send input+label::before {
   content: "";
   position: absolute;
   left: 18px;
@@ -117,7 +116,7 @@
   box-sizing: border-box;
 }
 
-.modal__send input:checked + label::after {
+.modal__send input:checked+label::after {
   content: "";
   position: absolute;
   top: 17px;
@@ -130,35 +129,39 @@
 }
 
 .modal__close {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	width: 23px;
-	height: 23px;
-	border: 0;
-	cursor: pointer;
-	background-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 23px;
+  height: 23px;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .modal__close::before,
 .modal__close::after {
-	content: "";
-	position: absolute;
-	top: 8px;
-	left: 0px;
-	width: 23px;
-	height: 1px;
-	background-color: $white;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  width: 23px;
+  height: 1px;
+  background-color: $white;
 }
 
 .modal__close::before {
-	transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .modal__close::after {
-	transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .modal__show {
   display: block;
+}
+
+.modal__hidden {
+  overflow: hidden;
 }

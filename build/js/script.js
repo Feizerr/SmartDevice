@@ -112,24 +112,26 @@ var buttonShowModal = document.querySelector(".header__button");
 var closeModal = document.querySelector(".modal__close");
 var buttonSend = document.querySelector(".modal__button");
 var overlay = document.querySelector(".modal");
+var body = document.querySelector('.body');
+
+var changePopupCondition = function() {
+  overlay.classList.toggle("modal__show");
+  body.classList.toggle('modal__hidden');
+}
 
 
 
 buttonShowModal.addEventListener("click", function(evt) {
 	evt.preventDefault();
-	overlay.classList.add("modal__show");
-
-  personNameFromModal.focus();
+	changePopupCondition()
 });
 
 closeModal.addEventListener("click", function() {
-	overlay.classList.remove("modal__show");
-
+	changePopupCondition();
 });
 
 buttonSend.addEventListener("onsubmit", function() {
-  overlay.classList.remove("modal__show");
-
+  changePopupCondition();
 });
 
 window.addEventListener("keydown", function(evt) {
@@ -137,14 +139,48 @@ window.addEventListener("keydown", function(evt) {
 
 		if (overlay.classList.contains("modal__show")) {
 			evt.preventDefault();
-			overlay.classList.remove("modal__show");
+      changePopupCondition();
 	  }
   }
 })
 
 document.onclick = function(e){
   if (e.target === overlay) {
-    overlay.classList.remove("modal__show");
+    changePopupCondition();
   };
 };
+
+// }
+
+// buttonShowModal.addEventListener("click", function(evt) {
+// 	evt.preventDefault();
+// 	overlay.classList.add("modal__show");
+//   personNameFromModal.focus();
+// });
+
+// closeModal.addEventListener("click", function() {
+// 	overlay.classList.remove("modal__show");
+
+// });
+
+// buttonSend.addEventListener("onsubmit", function() {
+//   overlay.classList.remove("modal__show");
+
+// });
+
+// window.addEventListener("keydown", function(evt) {
+// 	if (evt.key === 27 || evt.key === "Escape") {
+
+// 		if (overlay.classList.contains("modal__show")) {
+// 			evt.preventDefault();
+// 			overlay.classList.remove("modal__show");
+// 	  }
+//   }
+// })
+
+// document.onclick = function(e){
+//   if (e.target === overlay) {
+//     overlay.classList.remove("modal__show");
+//   };
+// };
 
