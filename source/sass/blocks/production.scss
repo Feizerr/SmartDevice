@@ -11,7 +11,7 @@
 
 @media (max-width: $tablet-width) {
   .production__wrapper {
-    padding: 49px 25px 78px;
+    padding: 49px 25px 36px;
   }
 }
 
@@ -33,7 +33,6 @@
 @media (max-width: $tablet-width) {
   .production ul {
     flex-direction: column;
-    // align-items: center;
     justify-content: center;
   }
 }
@@ -229,10 +228,9 @@
   }
 }
 
-
 .production li:hover {
   & p {
     color: $sky-blue;
-    background-color: rgba(black, 0.8);
+    background-color: rgba($black, 0.8);
   }
 }

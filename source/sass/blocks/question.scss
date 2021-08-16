@@ -2,7 +2,7 @@
   background-color: $sky-blue;
   color: $white;
   padding-top: 93px;
-  padding-bottom: 116px;
+  padding-bottom: 112px;
 }
 
 @media (max-width: $tablet-width) {
@@ -34,6 +34,10 @@
   background-repeat: no-repeat;
   background-size: 43%;
   background-position: 1% 85%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/plane@2x.png");
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -53,6 +57,7 @@
 .question__wrapper h2,
 .question__wrapper p,
 .question__form {
+  @include offset (0, 0);
   width: 50%;
   max-width: 570px;
 }
@@ -65,11 +70,19 @@
   }
 }
 
+@media (max-width: $mobile-width) {
+  .question__wrapper h2,
+  .question__wrapper p,
+  .question__form {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .question h2 {
-  @include offset(0, 0);
   @include fonts(36px, 50px);
   font-family: roboto-condensed-regular, Arial, sans-serif;
-  padding-bottom: 7px;
+  padding: 0 0 11px;
   width: 50%;
 }
 
@@ -89,9 +102,8 @@
 }
 
 .question p {
-  @include offset(0, 0);
   @include fonts(16px, 21px);
-  padding-bottom: 49px;
+  padding: 0 0 49px;
   width: 50%;
 }
 
@@ -103,13 +115,18 @@
 
 @media (max-width: $mobile-width) {
   .question p {
-    width: 77%;
     padding-bottom: 27px;
   }
 }
 
 .question__form {
   max-width: 570px;
+}
+
+@media (max-width: $tablet-width) {
+  .question__form {
+    max-width: 100%;
+  }
 }
 
 .question__form ul {
@@ -150,12 +167,18 @@
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 16.5px;
+  color: $white;
 
   &:hover {
     background-color: rgba($white, 0.3);
   }
 
   &:active {
+    border: none;
+    outline: 2px solid $white;
+  }
+
+  &:focus {
     border: none;
     outline: 2px solid $white;
   }
@@ -219,6 +242,7 @@
 @media (max-width: $mobile-width) {
   .question__send {
     flex-direction: column;
+    text-align: left;
   }
 }
 
@@ -242,8 +266,10 @@
 
 @media (max-width: $mobile-width) {
   .question__button {
+    max-width: 100%;
     width: 100%;
     margin-bottom: 30px;
+    flex-basis: 100%;
   }
 }
 
@@ -267,7 +293,7 @@
 
 @media (max-width: $tablet-width) {
   .question__send label {
-    padding-left: 65px;
+    padding-left: 54px;
   }
 }
 
@@ -291,7 +317,7 @@
 
 @media (max-width: $tablet-width) {
   .question__send input + label::before {
-    left: 32px;
+    left: 21px;
     top: 9px;
   }
 }
@@ -317,7 +343,7 @@
 
 @media (max-width: $tablet-width) {
   .question__send input:checked + label::after {
-    left: 36px;
+    left: 26px;
     top: 14px;
   }
 }

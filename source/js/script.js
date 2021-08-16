@@ -113,23 +113,29 @@ var closeModal = document.querySelector(".modal__close");
 var buttonSend = document.querySelector(".modal__button");
 var overlay = document.querySelector(".modal");
 
+
+
 buttonShowModal.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	overlay.classList.add("modal__show");
+
   personNameFromModal.focus();
 });
 
 closeModal.addEventListener("click", function() {
 	overlay.classList.remove("modal__show");
+
 });
 
 buttonSend.addEventListener("onsubmit", function() {
   overlay.classList.remove("modal__show");
+
 });
 
 window.addEventListener("keydown", function(evt) {
 	if (evt.key === 27 || evt.key === "Escape") {
-		if (modal.classList.contains("modal__show")) {
+
+		if (overlay.classList.contains("modal__show")) {
 			evt.preventDefault();
 			overlay.classList.remove("modal__show");
 	  }

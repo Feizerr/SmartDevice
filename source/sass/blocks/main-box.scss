@@ -169,6 +169,7 @@
   opacity: 0.5;
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
+  padding-right: 11px;
 }
 
 .main-box__scroll:hover {
@@ -199,9 +200,4 @@
   .main-box__button-mobile {
     display: block;
   }
-}
-
-.modal__overlay {
-  width: 100%;
-  height: 100%;
 }
