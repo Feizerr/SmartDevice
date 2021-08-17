@@ -99,6 +99,11 @@
   margin-bottom: 50px;
 }
 
+.footer__logo-current {
+  cursor: auto;
+}
+
+
 @media (max-width: $tablet-width) {
   .footer__logo {
     margin-bottom: 18px;
@@ -158,6 +163,10 @@
 
 .footer__navigation {
   width: 45.6%;
+}
+
+.footer__contacts li {
+  color: rgba($dark-blue, 0.5);
 }
 
 .footer__navigation a,

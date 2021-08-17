@@ -37,6 +37,10 @@
   }
 }
 
+.header__logo-current {
+  cursor: auto;
+}
+
 @media (max-width: $mobile-width) {
   .header__logo-img {
     width: 38px;
@@ -87,8 +91,6 @@
     padding-top: 8px;
   }
 }
-
-
 
 .header__phone {
   margin-left: 88px;

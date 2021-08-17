@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Компания Smart Device</title>
+    <meta name="description"
+      content="Smart Device: производство и монтаж печатных плат, поставка комплектующих, блоков и модулей.">
+    <meta name="Keywords"
+      content="Smart Device, печатные платы, монтаж печатных плат, производство печатных плат, комплектующие для светотехники">
+    <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/pt-mono-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/roboto-condensed-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+
+  <body class="body">
+    <div class="page">
+      <section class="modal modal__web">
+        <div class="modal__popup">
+          <h2>Закажите звонок</h2>
+          <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <form class="modal__form">
+            <label class="visually-hidden" for="modal-name">Введите имя</label>
+            <input type="text" name="modal-name" placeholder="Имя" id="modal-name" maxlength="30" required>
+            <label class="visually-hidden" for="modal-phone">Введите номер телефона</label>
+            <input type="tel" name="modal-phone" data-tel-input placeholder="Телефон" id="modal-phone" maxlength="14"
+              required>
+            <label class="visually-hidden" for="modal-message">Введите текст сообщения</label>
+            <textarea name="comment" placeholder="Ваш вопрос" id="modal-message"></textarea>
+            <button class="button modal__button" type="submit">Задать вопрос</button>
+            <div class="modal__send">
+              <input class="visually-hidden" type="checkbox" name="agree" id="modal-agree" checked required>
+              <label for="modal-agree">Я согласен на обработку персональных данных</label>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
