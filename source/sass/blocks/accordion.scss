@@ -21,7 +21,7 @@
   @include offset(0, 0);
   @include fonts(15px, 16px);
   margin-bottom: 26px;
-  font-family: "roboto-condensed-regular", Arial, sans-serif;
+  font-family: 'roboto-condensed-regular', Arial, sans-serif;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -47,8 +47,8 @@
 
 @media (max-width: $mobile-width) {
   .accordion h2::after {
-    content: "";
-    background-image: url("../img/plus.svg");
+    content: '';
+    background-image: url('../img/plus.svg');
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
@@ -59,8 +59,8 @@
 
 @media (max-width: $mobile-width) {
   .accordion h2.active::after {
-    content: "";
-    background-image: url("../img/minus.svg");
+    content: '';
+    background-image: url('../img/minus.svg');
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;

@@ -2,12 +2,12 @@
   background-color: $dark-blue;
   color: $white;
   min-height: 878px;
-  background-image: url("../img/background-line.jpg");
+  background-image: url('../img/background-line.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/background-line@2x.jpg");
+    background-image: url('../img/background-line@2x.jpg');
   }
 }
 

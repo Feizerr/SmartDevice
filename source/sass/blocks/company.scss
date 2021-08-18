@@ -8,9 +8,9 @@
 
 @media (min-width: $desktop-width) {
   .company::before {
-    content: "";
+    content: '';
     position: absolute;
-    background-image: url("../img/year.png");
+    background-image: url('../img/year.png');
     background-repeat: no-repeat;
     width: 160px;
     height: 317px;
@@ -25,10 +25,10 @@
     padding: 0 25px 83px 211px;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       background-repeat: no-repeat;
-      background-image: url("../img/year-tab.png");
+      background-image: url('../img/year-tab.png');
       width: 185px;
       height: 362px;
       top: 0;

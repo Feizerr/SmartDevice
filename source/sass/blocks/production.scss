@@ -44,13 +44,13 @@
   margin-top: 20px;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: 5;
     background-color: $sky-blue;
     width: 63px;
     height: 63px;
-    background-image: url("../img/right.svg");
+    background-image: url('../img/right.svg');
     background-repeat: no-repeat;
     background-position: center;
     bottom: 0;
@@ -121,85 +121,85 @@
 }
 
 .production__manufacture {
-  background-image: url("../img/create.jpg");
+  background-image: url('../img/create.jpg');
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/create@2x.jpg");
+    background-image: url('../img/create@2x.jpg');
   }
 }
 
 @media (max-width: $tablet-width) {
   .production__manufacture {
-    background-image: url("../img/create-tab.jpg");
+    background-image: url('../img/create-tab.jpg');
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/create-tab@2x.jpg");
+      background-image: url('../img/create-tab@2x.jpg');
     }
   }
 }
 
 @media (max-width: $mobile-width) {
   .production__manufacture {
-    background-image: url("../img/create-mob.jpg");
+    background-image: url('../img/create-mob.jpg');
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/create-mob@2x.jpg");
+      background-image: url('../img/create-mob@2x.jpg');
     }
   }
 }
 
 .production__mounting {
-  background-image: url("../img/mounting.jpg");
+  background-image: url('../img/mounting.jpg');
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/mounting@2x.jpg");
+    background-image: url('../img/mounting@2x.jpg');
   }
 }
 
 @media (max-width: $tablet-width) {
   .production__mounting {
-    background-image: url("../img/mounting-tab.jpg");
+    background-image: url('../img/mounting-tab.jpg');
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/mounting-tab@2x.jpg");
+      background-image: url('../img/mounting-tab@2x.jpg');
     }
   }
 }
 
 @media (max-width: $mobile-width) {
   .production__mounting {
-    background-image: url("../img/mounting-mob.jpg");
+    background-image: url('../img/mounting-mob.jpg');
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/mounting-mob@2x.jpg");
+      background-image: url('../img/mounting-mob@2x.jpg');
     }
   }
 }
 
 .production__light {
-  background-image: url("../img/light.jpg");
+  background-image: url('../img/light.jpg');
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/light@2x.jpg");
+    background-image: url('../img/light@2x.jpg');
   }
 }
 
 @media (max-width: $tablet-width) {
   .production__light {
-    background-image: url("../img/light-tab.jpg");
+    background-image: url('../img/light-tab.jpg');
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/light-tab@2x.jpg");
+      background-image: url('../img/light-tab@2x.jpg');
     }
   }
 }
 
 @media (max-width: $mobile-width) {
   .production__light {
-    background-image: url("../img/light-mob.jpg");
+    background-image: url('../img/light-mob.jpg');
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/light-mob@2x.jpg");
+      background-image: url('../img/light-mob@2x.jpg');
     }
   }
 }

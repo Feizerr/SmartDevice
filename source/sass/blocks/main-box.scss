@@ -73,7 +73,7 @@
 
   &::before {
     position:absolute;
-    content: "";
+    content: '';
     width: 66px;
     height: 2px;
     background-color: $white;
@@ -187,11 +187,11 @@
   z-index: 0;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 615px;
     height: 638px;
-    background-image: url("../img/triangles.svg");
+    background-image: url('../img/triangles.svg');
     background-position: 80.5% 50%;
     background-repeat: no-repeat;
     top: 31px;
@@ -205,11 +205,11 @@
     padding-top: 36px;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 565px;
       height: 384px;
-      background-image: url("../img/group.svg");
+      background-image: url('../img/group.svg');
       background-position: -7% 100%;
       background-repeat: no-repeat;
       top: 6px;
@@ -228,11 +228,11 @@
     height: 196px;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 182px;
       height: 380px;
-      background-image: url("../img/group.svg");
+      background-image: url('../img/group.svg');
       background-position: -11% 97%;
       background-repeat: no-repeat;
       top: 6px;
@@ -256,4 +256,3 @@
     text-align: right;
   }
 }
-

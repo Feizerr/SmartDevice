@@ -30,13 +30,13 @@
   justify-content: flex-end;
   flex-direction: column;
   align-items: flex-end;
-  background-image: url("../img/plane.png");
+  background-image: url('../img/plane.png');
   background-repeat: no-repeat;
   background-size: 43%;
   background-position: 1% 85%;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/plane@2x.png");
+    background-image: url('../img/plane@2x.png');
   }
 }
 
@@ -305,7 +305,7 @@
 }
 
 .question__send input + label::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 18px;
   top: 11px;
@@ -330,13 +330,13 @@
 }
 
 .question__send input:checked + label::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 17px;
   left: 22px;
   width: 18px;
   height: 14px;
-  background-image: url("../img/check.svg");
+  background-image: url('../img/check.svg');
   background-position: 0 0;
   background-repeat: no-repeat;
 }
