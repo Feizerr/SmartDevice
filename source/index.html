@@ -22,9 +22,9 @@
     <div class='page'>
       <header class='header'>
         <div class='header__wrapper'>
-          <a class='header__logo header__logo-current' href=''>
+          <a class='header__logo header__logo-current'>
             <picture>
-              <source media='(max-width: 768px)' srcset='img/brain.svg'>
+              <source media='(max-width: 767px)' srcset='img/brain.svg'>
               <img class='header__logo-img' src='img/logo.svg' width='202' height='52' alt='Логотип компании'>
             </picture>
           </a>
@@ -36,7 +36,7 @@
               <span>info@sd.ru</span>
             </a>
             <a class='header__phone' href='tel:74950005252'>
-              <svg width='17' height='17'>
+              <svg width='17' height='18'>
                 <use xlink:href='img/sprite.svg#phone-call' x='0' y='0'></use>
               </svg>
               <span>+7 (495) 000 52 52</span>
@@ -112,7 +112,7 @@
               Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
               <span>(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
                 Производители светотехники России</span>.</p>
-            <a class='button company__button'>Подробнее</a>
+            <a class='button company__button' href="#">Подробнее</a>
           </section>
         </div>
         <section class='production'>
@@ -145,7 +145,7 @@
               <ul>
                 <li>
                   <label class='visually-hidden' for='name'>Введите имя</label>
-                  <input type='text' name='name' placeholder='Имя' id='name' maxlength='30' required>
+                  <input type='text' name='name' placeholder='Имя' id='name' required>
                 </li>
                 <li>
                   <label class='visually-hidden' for='phone'>Введите номер телефона</label>
@@ -170,7 +170,7 @@
       <footer class='footer'>
         <div class='footer__wrapper'>
           <div class='footer__links'>
-            <a class='footer__logo footer__logo-current' href=''>
+            <a class='footer__logo footer__logo-current'>
               <svg width='216' height='52'>
                 <use xlink:href='img/sprite.svg#service-device' x='0' y='0'></use>
               </svg>
@@ -204,7 +204,7 @@
           </div>
           <div class='accordion'>
             <section class='accordion__item footer__navigation'>
-              <h2 tabindex='0'>Разделы сайта</h2>
+              <h2>Разделы сайта</h2>
               <div class='accordion__item-body accordion__no-js'>
                 <div class='accordion__item-content accordion__container-list'>
                   <ul>
@@ -222,7 +222,7 @@
               </div>
             </section>
             <section class='accordion__item footer__contacts'>
-              <h2 tabindex='0'>Наш офис</h2>
+              <h2>Наш офис</h2>
               <div class='accordion__item-body accordion__no-js'>
                 <ul class='accordion__item-content'>
                   <li>г. Мытищи, Олимпийский проспект, д.10</li>
@@ -237,7 +237,7 @@
         <section class='footer__information'>
           <div class='footer__information-wrapper'>
             <div class='footer__container'>
-              <p>Все права защищены</p>
+              <p><span class="footer__hidden">Все права защищены</span></p>
               <p>1999-2018 SD Service Devices</p>
             </div>
             <p>Условия конфиденциальности</p>
@@ -252,9 +252,9 @@
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <form class='modal__form'>
             <label class='visually-hidden' for='modal-name'>Введите имя</label>
-            <input type='text' name='modal-name' placeholder='Имя' id='modal-name' maxlength='30' required>
+            <input type='text' name='modal-name' placeholder='Имя' id='modal-name' required>
             <label class='visually-hidden' for='modal-phone'>Введите номер телефона</label>
-            <input type='tel' name='modal-phone' data-tel-input placeholder='Телефон' id='modal-phone' maxlength='14'
+            <input type='tel' name='modal-phone' data-tel-input placeholder='Телефон' id='modal-phone' minlength='14' maxlength='14'
               required>
             <label class='visually-hidden' for='modal-message'>Введите сообщение</label>
             <textarea name='comment' placeholder='Ваш вопрос' id='modal-message'></textarea>

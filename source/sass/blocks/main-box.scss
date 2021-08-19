@@ -28,6 +28,9 @@
 @media (max-width: $mobile-width) {
   .main-box__content {
     padding-left: 0;
+    z-index: 2;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
 
@@ -41,6 +44,7 @@
   padding-left: 10px;
   font-family: roboto-condensed-bold, Arial, sans-serif;
   max-width: 96%;
+  z-index: 5;
 }
 
 @media (max-width: $tablet-width) {
@@ -209,7 +213,7 @@
       position: absolute;
       width: 565px;
       height: 384px;
-      background-image: url('../img/group.svg');
+      background-image: url('../img/tablet-group.svg');
       background-position: -7% 100%;
       background-repeat: no-repeat;
       top: 6px;
@@ -224,20 +228,21 @@
     margin: 0 auto;
     padding-top: 32px;
     padding-left: 11px;
-    width: 100%;
+    width: max-content;
     height: 196px;
+    margin: 0 auto;
 
     &::after {
       content: '';
       position: absolute;
-      width: 182px;
-      height: 380px;
-      background-image: url('../img/group.svg');
-      background-position: -11% 97%;
+      width: 411px;
+      height: 412px;
+      background-image: url('../img/mobile.svg');
+      background-position: -11% 155%;
       background-repeat: no-repeat;
       top: 6px;
       left: revert;
-      right: 0;;
+      right: -72%;
     }
   }
 }
@@ -251,6 +256,8 @@
 
 @media (max-width: $mobile-width) {
   .main-box__img {
+    display: block;
+    margin: 0 auto;
     width: 301px;
     height: 220px;
     text-align: right;

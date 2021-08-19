@@ -3,6 +3,7 @@
   color: $white;
   padding-top: 93px;
   padding-bottom: 112px;
+  position: relative;
 }
 
 @media (max-width: $tablet-width) {
@@ -21,7 +22,7 @@
 }
 
 .question__wrapper {
-  padding-right: 200px;
+  padding-right: 10.5%;
   padding-left: 10px;
   box-sizing: border-box;
   max-width: 1568px;
@@ -30,21 +31,29 @@
   justify-content: flex-end;
   flex-direction: column;
   align-items: flex-end;
-  background-image: url('../img/plane.png');
-  background-repeat: no-repeat;
-  background-size: 43%;
-  background-position: 1% 85%;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url('../img/plane@2x.png');
+  &:before {
+    position: absolute;
+    content: "";
+    width: 731px;
+    height: 551px;
+    background-image: url('../img/plane.png');
+    background-repeat: no-repeat;
+    background-size: 94%;
+    background-position: 43% 63%;
+    right: 54%;
+    z-index: 0;
   }
 }
 
 @media (max-width: $tablet-width) {
   .question__wrapper {
-    background-image: none;
     align-items: flex-start;
     padding: 0 89px;
+
+    &:before {
+      display: none;
+    }
   }
 }
 
@@ -60,6 +69,7 @@
   @include offset (0, 0);
   width: 50%;
   max-width: 570px;
+  z-index: 2;
 }
 
 @media (max-width: $tablet-width) {
@@ -219,6 +229,7 @@
 .question__form textarea {
   min-height: 154px;
   margin-bottom: 43px;
+  resize: none;
 }
 
 @media (max-width: $tablet-width) {
@@ -246,8 +257,12 @@
   }
 }
 
-.question__send:hover label {
+.question__send input:hover + label {
   opacity: 0.5;
+}
+
+.question__send input:focus + label {
+  outline: 1px solid $white;
 }
 
 .question__button {

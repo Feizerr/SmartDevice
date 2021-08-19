@@ -17,15 +17,23 @@
 .footer__information-wrapper {
   @include fonts(15px, 25px);
   color: $dark-blue;
+  max-width: 1469px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.footer__wrapper {
+  @include fonts(15px, 25px);
+  color: $dark-blue;
   display: flex;
   max-width: 1469px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
+
 @media (max-width: $tablet-width) {
-  .footer__wrapper,
-  .footer__information-wrapper {
+  .footer__wrapper {
     flex-wrap: wrap;
   }
 }
@@ -43,14 +51,18 @@
 .footer__information-wrapper {
   @include fonts(13px, 24px);
   text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto 1fr 1fr;
+  gap: 20px;
   width: 100%;
   padding: 14px 30px;
 }
 
 @media (max-width: $tablet-width) {
   .footer__information-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
     padding: 21px 28px 26px;
   }
 }
@@ -119,7 +131,8 @@
 .footer__social {
   display: flex;
   flex-wrap: wrap;
-  width: max-content;
+  max-width: 200px;
+  padding-right: 30px;
 }
 
 @media (max-width: $tablet-width) {
@@ -238,6 +251,10 @@
   letter-spacing: 0.4px;
 }
 
+.footer__information-wrapper p:nth-of-type(2n+1) {
+  align-items: center;
+}
+
 @media (max-width: $mobile-width) {
   .footer__information-wrapper p:not(:last-child) {
     padding-bottom: 21px;
@@ -245,15 +262,25 @@
 }
 
 .footer__container {
+  grid-column-start: 1;
+  grid-column-end: 3;;
+  grid-row: 1/1;
   display: flex;
-  justify-content: space-between;
-  margin-right: -19%;
+  flex-wrap: wrap;
+  min-width: 455px;
 }
 
 @media (max-width: $tablet-width) {
   .footer__container {
-    width: 100%;
+    position: absolute;
+    top: 8%;
+    right: -10%;
+    transform: translate(-14%, -8%);
   }
+}
+
+.footer__container p {
+  width: max-content;
 }
 
 @media (max-width: $tablet-width) {
@@ -262,29 +289,28 @@
   }
 }
 
-@media (max-width: $tablet-width) {
-  .footer__container p:last-child{
-    position: absolute;
-    top: 8%;
-    right: 21%;
-    transform: translate(-21%, -8%);
-  }
-}
-
 @media (max-width: $mobile-width) {
   .footer__container p:last-child{
     top: 15%;
     left: 50%;
     transform: translateX(-50%);
-    width: max-content;
   }
 }
 
 .footer__container p:not(:last-child){
-  padding-right: 72px;
+  padding-right: 17%;
 }
 
 .footer__information li {
   @include fonts(13px, 24px);
   text-transform: uppercase;
 }
+
+.footer__information-wrapper p:nth-of-type(2n+1){
+  text-align: center;
+}
+
+.footer__information-wrapper p:nth-of-type(2n+2){
+  text-align: right;
+}
+

@@ -27,7 +27,6 @@
   @include list-reset();
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 @media (max-width: $tablet-width) {
@@ -71,6 +70,14 @@
   .production li {
     margin-bottom: 30px;
   }
+}
+
+.production li:not(:nth-child(3n)) {
+  margin-right: 23px;
+}
+
+.production li:nth-child(3n) {
+  justify-self: flex-end;
 }
 
 .production h2 {

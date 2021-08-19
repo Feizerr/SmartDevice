@@ -79,6 +79,10 @@
   color: $white;
 }
 
+.modal__form textarea {
+  resize: none;
+}
+
 .modal__form input {
   min-height: 50px;
   box-sizing: border-box;
@@ -120,6 +124,7 @@
   flex-basis: 49%;
   padding-left: 45px;
   padding-top: 10px;
+  color: $white;
 }
 
 .modal__send input+label::before {
@@ -143,6 +148,10 @@
   background-image: url('../img/check.svg');
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.modal__send label:hover {
+  color: rgba($white, 0.5);
 }
 
 .modal__close {

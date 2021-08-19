@@ -58,6 +58,7 @@
   min-width: 50%;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .header__contacts a:hover {
@@ -75,7 +76,7 @@
   @include fonts(16px, 18px);
   padding-top: 14px;
   display: block;
-  min-width: min-content;
+  min-width: max-content;
 }
 
 @media (max-width: $tablet-width) {
