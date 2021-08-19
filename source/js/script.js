@@ -7,17 +7,19 @@ var accordionItemHeaders = document.querySelectorAll('.accordion__item > h2');
 var accordionItemsBody = document.querySelectorAll('.accordion__item-body');
 
 var addTabIndex = function () {
-  if (window.innerWidth <= 767) {
-    accordionItemHeaders.forEach(function (header) {
-      header.setAttribute('tabindex', -1);
-    });
-  }
+  window.addEventListener('resize', function () {
+    if (window.innerWidth <= 767) {
+      accordionItemHeaders.forEach(function (header) {
+        header.setAttribute('tabindex', 0);
+      });
+    }
 
-  else {
-    accordionItemHeaders.forEach(function (header) {
-      header.removeAttribute('tabindex');
-    });
-  }
+    else {
+      accordionItemHeaders.forEach(function (header) {
+        header.removeAttribute('tabindex');
+      });
+    }
+  })
 }
 
 addTabIndex();
@@ -55,77 +57,63 @@ accordionItemHeaders.forEach(function (accordionItemHeader) {
 
 // mask
 
-// var backspace = 'Backspace';
-// var startTemplate = '+7(';
-// var bracket = ')';
+var backspace = 'Backspace';
+var startTemplate = '+7(';
+var shortTemplate = '7(';
+var shortenedStartTemplate = '+7';
+var textPlus = '+';
+var openBracket = '(';
+var openBracketKeyCode = 219;
+var shiftKeyCode = 'Shift';
+var closingBracket = ')';
 
-// var validation = function () {
+var validation = function () {
 
-//   var phone = document.querySelectorAll('[type=tel]');
+  var phone = document.querySelectorAll('[type=tel]');
 
-//   var addMask = function (input) {
-//     input.addEventListener('focus', function (evt) {
-//       if (!input.value && evt.key !== backspace) {
-//         input.value = startTemplate;
-//       } else {
-//         return;
-//       }
-//     });
-
-//     input.addEventListener('keydown', function (evt) {
-//       var numberLength = input.value.length;
-
-//       if (numberLength === 6 && evt.key !== backspace) {
-//         input.value = input.value + bracket;
-//       }
-
-//       if (numberLength === 0) {
-//         input.value = startTemplate;
-//       }
-//     });
-//   };
-
-//   if (phone) {
-//     for (var i = 0; i < phone.length; i++) {
-//       addMask(phone[i]);
-//     }
-//   }
-// };
-
-// validation();
-
-var phoneBeginning = '+7(';
-var phoneInputValueLength = 0;
-var phoneBeginningeRegex = '\\+7\\([0-9]{3}';
-var inputPhone = document.querySelector('[type=tel]');
-
-// inputsPhone.forEach(function(inputPhone){
-
-  inputPhone.addEventListener('focus', (event) => {
-    inputPhone.value = phoneBeginning;
-    phoneInputValueLength = inputPhone.value.length;
-    console.log(phoneInputValueLength);
-    setPhoneChangeHandler();
-  });
-
-  var setPhoneChangeHandler = function() {
-    inputPhone.addEventListener('input', (evt) => {
-      phoneInputValueLength = inputPhone.value.length;
-    });
-
-    inputPhone.addEventListener('keydown', (evt) => {
-
-      if (phoneInputValueLength === 6 && inputPhone.value.match(phoneBeginningeRegex) && evt.key != 'Backspace') {
-        setFuckingClosingBracket();
+  var addMask = function (input) {
+    input.addEventListener('focus', function (evt) {
+      if (!input.value && evt.key !== backspace) {
+        input.value = startTemplate;
+      } else {
+        return;
       }
     });
-  }
 
-  var setFuckingClosingBracket = function () {
-    inputPhone.value += ')'
-  }
-// })
+    input.addEventListener('keydown', function (evt) {
+      var numberLength = input.value.length;
 
+      if (numberLength === 6 && evt.key !== backspace) {
+        input.value = input.value + closingBracket;
+      }
+
+      if (numberLength === 0 && (evt.key === backspace || evt.key === shiftKeyCode)) {
+        input.value = startTemplate;
+        evt.preventDefault();
+      }
+
+      if (numberLength === 0) {
+        input.value = startTemplate;
+      }
+
+      if (numberLength === 1 && input.value === textPlus && evt.key !== backspace) {
+        input.value += shortTemplate;
+      }
+
+      if (numberLength === 2 && input.value === shortenedStartTemplate && evt.key !== backspace && evt.key !== openBracketKeyCode)  {
+        input.value += openBracket;
+      }
+    });
+  };
+
+  if (phone) {
+    for (var i = 0; i < phone.length; i++) {
+      addMask(phone[i]);
+    }
+  }
+};
+
+validation();
 
 // localStorage
 
@@ -168,6 +156,15 @@ var addDataFromLocalStorage = function (form, personName, personPhone) {
 addDataFromLocalStorage(questionForm, personNameFromQuestionForm, personPhoneFromQuestionForm);
 addDataFromLocalStorage(modalForm, personNameFromModal, personPhoneFromModal);
 
+window.addEventListener('load', function () {
+  if (storageName) {
+    personName.value = storageName;
+    if (storagePhone) {
+      personPhone.value = storagePhone;
+    }
+  }
+});
+
 // pop-up
 
 var buttonShowModal = document.querySelector('.header__button');
@@ -178,6 +175,11 @@ var body = document.querySelector('.body');
 
 var changePopupCondition = function () {
   overlay.classList.toggle('modal__show');
+
+  if (overlay.classList.contains('modal__show')) {
+    personNameFromModal.focus();
+  }
+
   body.classList.toggle('modal__hidden');
 }
 

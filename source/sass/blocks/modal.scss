@@ -150,8 +150,12 @@
   background-repeat: no-repeat;
 }
 
-.modal__send label:hover {
+.modal__send input:hover + label {
   color: rgba($white, 0.5);
+}
+
+.modal__send input:focus + label {
+  outline: 1px solid $white;
 }
 
 .modal__close {

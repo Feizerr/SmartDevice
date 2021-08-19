@@ -25,20 +25,22 @@
 
 .production ul {
   @include list-reset();
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
 }
 
 @media (max-width: $tablet-width) {
   .production ul {
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 0;
   }
 }
 
 .production li {
   @include offset(0, 0);
-  flex-basis: 32%;
   position: relative;
   margin-top: 20px;
 
@@ -70,14 +72,6 @@
   .production li {
     margin-bottom: 30px;
   }
-}
-
-.production li:not(:nth-child(3n)) {
-  margin-right: 23px;
-}
-
-.production li:nth-child(3n) {
-  justify-self: flex-end;
 }
 
 .production h2 {

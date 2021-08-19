@@ -28,20 +28,21 @@
 
 @media (max-width: $tablet-width) {
   .accordion h2 {
-    margin-bottom: 23px;
+    padding-bottom: 24px;
+    margin-bottom: 0;
+    box-sizing: border-box;
   }
 }
-
-// accordion__item-header
 
 @media (max-width: $mobile-width) {
   .accordion h2 {
     margin-bottom: 0;
+    padding-bottom: 5px;
+    min-height: 77px;
     display: flex;
     align-items: center;
     position: relative;
     cursor: pointer;
-
   }
 }
 
@@ -83,18 +84,10 @@
   padding-right: 16%;
 }
 
-
-
 @media (max-width: $mobile-width) {
   .accordion__item-body {
     max-height: 0;
     overflow: hidden;
-  }
-}
-
-@media (max-width: $mobile-width) {
-  .accordion__item-body .accordion__item-content {
-    padding-top: 32px;
   }
 }
 

@@ -56,7 +56,7 @@
             <picture>
               <source type="image/webp" srcset="img/item.webp 1x, img/item@2x.webp 2x">
               <!-- 1х: 705px; 2x: 1410px -->
-              <img loading="lazy" class="main-box__img" width="705" height="515" alt="изображение платы" src="img/item.png" srcset="img/img/item@2x.png 2x">
+              <img loading="lazy" class="main-box__img" width="705" height="515" alt="изображение платы" src="img/item.png" srcset="img/item@2x.png 2x">
             </picture>
           </div>
         </section>
@@ -139,15 +139,15 @@
           <div class="question__wrapper">
             <h2>Остались вопросы? Задайте их нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
-            <form class="question__form">
+            <form class="question__form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
               <ul>
                 <li>
                   <label class="visually-hidden" for="name">Введите имя</label>
-                  <input type="text" name="name" placeholder="Имя" id="name" required="">
+                  <input type="text" pattern="\D*" name="name" placeholder="Имя" id="name" required="">
                 </li>
                 <li>
                   <label class="visually-hidden" for="phone">Введите номер телефона</label>
-                  <input type="tel" name="phone" data-tel-input="" placeholder="Телефон" id="phone" maxlength="14" pattern="\(\d{3}\) \d{3}\-\d{4}" required="">
+                  <input type="tel" name="phone" data-tel-input="" placeholder="Телефон" id="phone" maxlength="14" pattern="\+7\([0-9]{3}\)[0-9]{7}" required="">
                 </li>
                 <li>
                   <label class="visually-hidden" for="message">Введите текст сообщения</label>
@@ -234,7 +234,7 @@
         <section class="footer__information">
           <div class="footer__information-wrapper">
             <div class="footer__container">
-              <p><span class="footer__hidden">Все права защищены</span></p>
+              <p>Все права защищены</p>
               <p>1999-2018 SD Service Devices</p>
             </div>
             <p>Условия конфиденциальности</p>
@@ -247,11 +247,11 @@
         <div class="modal__popup">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-          <form class="modal__form">
+          <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
             <label class="visually-hidden" for="modal-name">Введите имя</label>
-            <input type="text" name="modal-name" placeholder="Имя" id="modal-name" required="">
+            <input type="text" pattern="\D*" name="modal-name" placeholder="Имя" id="modal-name" required="">
             <label class="visually-hidden" for="modal-phone">Введите номер телефона</label>
-            <input type="tel" name="modal-phone" data-tel-input="" placeholder="Телефон" id="modal-phone" minlength="14" maxlength="14" required="">
+            <input type="tel" name="modal-phone" data-tel-input="" placeholder="Телефон" id="modal-phone" minlength="14" maxlength="14" pattern="\+7\([0-9]{3}\)[0-9]{7}" required="">
             <label class="visually-hidden" for="modal-message">Введите сообщение</label>
             <textarea name="comment" placeholder="Ваш вопрос" id="modal-message"></textarea>
             <button class="button modal__button" type="submit">Задать вопрос</button>
