@@ -5,6 +5,7 @@
 var minHeight = 0;
 var accordionItemHeaders = document.querySelectorAll('.accordion__item > h2');
 var accordionItemsBody = document.querySelectorAll('.accordion__item-body');
+var padding = 30;
 
 var addTabIndex = function () {
   window.addEventListener('resize', function () {
@@ -38,7 +39,7 @@ var useAccordion = function (element) {
   element.classList.toggle('active');
   var accordionItemBody = element.nextElementSibling;
   if (element.classList.contains('active')) {
-    accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
+    accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + padding + 'px';
   } else {
     accordionItemBody.style.maxHeight = minHeight;
   }
@@ -155,15 +156,6 @@ var addDataFromLocalStorage = function (form, personName, personPhone) {
 
 addDataFromLocalStorage(questionForm, personNameFromQuestionForm, personPhoneFromQuestionForm);
 addDataFromLocalStorage(modalForm, personNameFromModal, personPhoneFromModal);
-
-window.addEventListener('load', function () {
-  if (storageName) {
-    personName.value = storageName;
-    if (storagePhone) {
-      personPhone.value = storagePhone;
-    }
-  }
-});
 
 // pop-up
 

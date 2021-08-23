@@ -41,8 +41,8 @@
               </svg>
               <span>+7 (495) 000 52 52</span>
             </a>
-            <a href='modal.html' class='header__button button'>Заказать звонок</a>
           </div>
+          <a href='modal.html' class='header__button button'>Заказать звонок</a>
         </div>
         <section class='main-box'>
           <div class='main-box__content'>
@@ -145,7 +145,7 @@
               <ul>
                 <li>
                   <label class='visually-hidden' for='name'>Введите имя</label>
-                  <input type='text' pattern="\D*" name='name' placeholder='Имя' id='name' required>
+                  <input type='text' name='name' placeholder='Имя' id='name' required>
                 </li>
                 <li>
                   <label class='visually-hidden' for='phone'>Введите номер телефона</label>
@@ -235,10 +235,8 @@
         </div>
         <section class='footer__information'>
           <div class='footer__information-wrapper'>
-            <div class='footer__container'>
-              <p>Все права защищены</p>
-              <p>1999-2018 SD Service Devices</p>
-            </div>
+            <span class="footer__right">Все права защищены</span>
+            <span class="footer__decorate">1999-2018 SD Service Devices</span>
             <p>Условия конфиденциальности</p>
             <p>Developed by wow studio </p>
           </div>
@@ -251,7 +249,7 @@
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <form class='modal__form' action='https://echo.htmlacademy.ru/' method='post' autocomplete="off">
             <label class='visually-hidden' for='modal-name'>Введите имя</label>
-            <input type='text' pattern="\D*" name='modal-name' placeholder='Имя' id='modal-name' required>
+            <input type='text' name='modal-name' placeholder='Имя' id='modal-name' required>
             <label class='visually-hidden' for='modal-phone'>Введите номер телефона</label>
             <input type='tel' name='modal-phone' data-tel-input placeholder='Телефон' id='modal-phone' minlength='14' maxlength='14' pattern="\+7\([0-9]{3}\)[0-9]{7}" required>
             <label class='visually-hidden' for='modal-message'>Введите сообщение</label>

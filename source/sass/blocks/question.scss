@@ -249,12 +249,27 @@
 .question__send {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 @media (max-width: $mobile-width) {
   .question__send {
     flex-direction: column;
     text-align: left;
+  }
+}
+
+.question__send input {
+  position: absolute;
+  right: 30%;
+  top: 0;
+}
+
+@media (max-width: $mobile-width) {
+  .question__send input {
+    right: revert;
+    left: 0;
+    top: 45%;
   }
 }
 

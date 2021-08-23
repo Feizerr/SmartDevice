@@ -96,6 +96,12 @@
 }
 
 @media (max-width: $mobile-width) {
+  .accordion__item-body ul{
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
   .accordion__no-js {
     max-height: max-content;
     overflow: auto;

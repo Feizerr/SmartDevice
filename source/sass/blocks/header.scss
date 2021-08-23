@@ -59,10 +59,17 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  flex-grow: 1;
 }
 
-.header__wrapper a {
-  padding-right: 15px;
+.header__contacts a {
+  margin-left: 8%;
+}
+
+@media (max-width: $tablet-width) {
+  .header__contacts a {
+    margin-left: 20px;
+  }
 }
 
 .header__contacts a:hover {
@@ -97,10 +104,6 @@
   }
 }
 
-.header__phone {
-  margin-left: 76px;
-}
-
 @media (max-width: $tablet-width) {
   .header__phone {
     margin-left: 34px;
@@ -131,6 +134,7 @@
   .header__mail svg {
     width: 25px;
     height: 19px;
+    zoom: 1.3;
   }
 }
 
@@ -138,20 +142,29 @@
   .header__phone svg {
     width: 24px;
     height: 24px;
+    zoom: 1.3;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header__phone svg {
+    width: 18px;
   }
 }
 
 .header__button {
   @include link();
   display: block;
-  margin-left: 35px;
+  margin-left: 55px;
   background-color: $dark-blue;
   color: $white;
   border-color: $white;
-  padding: 16px 10px 8px;
+  padding: 16px 10px 11px;
   box-sizing: border-box;
   margin-bottom: 10px;
   letter-spacing: 0.5px;
+  height: max-content;
+  min-width: 180px;
 }
 
 @media (max-width: $tablet-width) {
